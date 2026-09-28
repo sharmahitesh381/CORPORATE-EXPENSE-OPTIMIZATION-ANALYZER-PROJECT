@@ -1,41 +1,77 @@
-#  Corporate Expense Optimization Analyzer
+# Corporate Expense Optimization Analyzer
 
 ## 🚀 Objective
 
-Large organizations often struggle with optimizing budgets and tracking departmental efficiency across multiple regions. This full-stack data analytics project aims to:
+Large organizations often need to understand how departmental spending varies
+across different regions and how spending patterns relate to overall profitability.
 
-. Analyze and visualize departmental spending
-- Identify budget inefficiencies across states and departments
-- Correlate spend with profit to drive actionable cost control decisions
+This full-stack data analytics project aims to:
 
-  ## 🔗 Dataset Used
-- Source: [Kaggle - 1000 Companies Financial Dataset](https://www.kaggle.com/datasets)  
-- Format: Excel (.xlsx)  
-- Structure: Department-level spend and profit across different U.S. states
+- Analyze and visualize departmental spending
+- Identify high-spending departments across different states
+- Compare spending patterns across R&D, Marketing, and Administration
+- Analyze the relationship between corporate spending and company profitability
+- Generate actionable insights for corporate cost-control and resource allocation
 
+---
+
+## 🔗 Dataset Used
+
+- Source: Custom synthetic single-company financial dataset created for the project
+- Format: Excel (.xlsx)
+- Records: 1,080 expense records covering 2025
+- Company Scope: Single company
+- Departments: R&D, Marketing, Administration
+- States: California, Florida, New York
+- Fields:
+  - `Date`
+  - `Department`
+  - `State`
+  - `Spend`
+  - `Company Profit`
+
+The dataset represents expense activity for a single organization across three
+departments and multiple states. Company Profit represents the overall company's
+profit for the corresponding period and is used to analyze the relationship
+between corporate spending and profitability.
+
+---
 
 ## 🛠️ Tech Stack & Tools
 
-| Tool      | Purpose                            |
-|-----------|------------------------------------|
-| Excel     | Data wrangling, transformation     |
-| Power Query | Data reshaping (wide to long)    |
-| MySQL     | Data analysis via SQL queries      |
-| Tableau Public | Dashboard and visual analytics |
+| Tool | Purpose |
+|------|---------|
+| Excel | Data cleaning, validation and preparation |
+| Power Query | Data transformation and preprocessing |
+| MySQL | SQL-based data analysis and aggregation |
+| Tableau Public | Interactive dashboards and visual analytics |
 
+---
 
 ## 🔄 Project Workflow
 
-### ✅ 1. Data Collection:
+### ✅ 1. Data Collection
 
-- Sourced from Kaggle’s “1000 Companies Financial Dataset”
-- Contains spending & profit by department and state
+- Created a single-company financial expense dataset for analysis
+- Dataset contains expense records across R&D, Marketing, and Administration
+- Includes state-wise spending across California, Florida, and New York
+- Contains company-level profit data for studying the relationship between
+  spending and profitability
+- Covers the complete 2025 period
 
-### ✅ 2. Excel Preprocessing:
+---
 
-- Reshaped data using Power Query
-- Cleaned null values and removed duplicates
-- Final columns: `Department`, `Spend`, `Profit`, `State`
+### ✅ 2. Excel Preprocessing
+
+- Imported and reviewed the raw Excel dataset
+- Checked for null values and duplicate records
+- Standardized department and state names
+- Validated numerical fields and date values
+- Prepared the dataset for SQL analysis and Tableau visualization
+
+Final columns:
+
+`Date`, `Department`, `State`, `Spend`, `Company Profit`
 
 ### ✅ 3. SQL Analysis (MySQL):
  
